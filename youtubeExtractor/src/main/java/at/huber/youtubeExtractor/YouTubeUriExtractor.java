@@ -125,7 +125,10 @@ public abstract class YouTubeUriExtractor extends AsyncTask<String, Void, Sparse
     }
 
     public YouTubeUriExtractor(Context con) {
-        context = con;
+        if(con == null)
+            Log.d(LOG_TAG, "Context = null");
+        else
+            context = con;
     }
 
     @Override
